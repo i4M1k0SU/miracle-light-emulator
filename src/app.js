@@ -13,7 +13,7 @@ const COLORS = {
   blue:   '#2196F3',
   purple: '#9C27B0',
   white:  '#FAFAFA',
-  black:  '#424242',
+  black:  '#111111',
 };
 
 // All commands with defined patterns, derived from miracle-light-controller/src/mlc.ts.
