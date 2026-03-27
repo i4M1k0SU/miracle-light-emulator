@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miracle Light Emulator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <button id="start-btn">START</button>
+  <div id="pattern-label"></div>
+
+  <div id="toolbar">
+    <button class="tool-btn" id="fullscreen-btn">⛶ フルスクリーン</button>
+    <button class="tool-btn" id="debug-btn">⚙ デバッグ</button>
+  </div>
+
+  <div id="debug-panel">
+    <div id="debug"></div>
+    <div id="decode-log"></div>
+    <div id="threshold-row">
+      <label>threshold: <span id="threshold-val">-90 dB</span></label>
+      <input id="threshold" type="range" min="-110" max="-50" step="1" value="-90">
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+  <script>
+    document.getElementById('start-btn').addEventListener('click', startEmulator);
+  </script>
+</body>
+</html>
