@@ -392,6 +392,18 @@ async function startEmulator() {
     });
   }
 
+  // Screen Wake Lock: prevent sleep while the emulator is running
+  if ('wakeLock' in navigator) {
+    let wakeLock = null;
+    const acquireWakeLock = async () => {
+      try { wakeLock = await navigator.wakeLock.request('screen'); } catch (_) {}
+    };
+    await acquireWakeLock();
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') acquireWakeLock();
+    });
+  }
+
   // Debug button toggles debug panel
   thresholdEl.value = String(signalThresholdDb);
   thresholdVal.textContent = `${signalThresholdDb} dB`;
