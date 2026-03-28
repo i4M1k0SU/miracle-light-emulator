@@ -12,6 +12,8 @@ body {
   transition: background-color 0.3s ease;
 }
 
+main { display: contents; }
+
 #start-btn {
   font-size: 2rem;
   padding: 1em 2em;

@@ -2,38 +2,45 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <title>Miracle Light Emulator</title>
-  <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://miracle-light-emulator.i4m1k0.su">
-  <meta property="og:title"       content="Miracle Light Emulator">
+  <link rel="canonical" href="https://miracle-light-emulator.i4m1k0.su">
+  <meta name="description" content="ミラクル♡ライト・ミラクルいちごライト エミュレータ">
+  <meta property="og:site_name" content="Miracle Light Emulator">
+  <meta property="og:title" content="Miracle Light Emulator">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://miracle-light-emulator.i4m1k0.su">
   <meta property="og:description" content="ミラクル♡ライト・ミラクルいちごライト エミュレータ">
-  <meta name="twitter:card"        content="summary">
-  <meta name="twitter:title"       content="Miracle Light Emulator">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Miracle Light Emulator">
   <meta name="twitter:description" content="ミラクル♡ライト・ミラクルいちごライト エミュレータ">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@i4M1k0SU">
+  <meta name="twitter:domain" content="miracle-light-emulator.i4m1k0.su">
+  <link rel="preload" href="./app.js" as="script">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <button id="start-btn">START</button>
-  <div id="pattern-label"></div>
+  <main>
+    <button id="start-btn">START</button>
+    <div id="pattern-label"></div>
 
-  <div id="toolbar">
-    <button class="tool-btn" id="fullscreen-btn">⛶ フルスクリーン</button>
-    <button class="tool-btn" id="debug-btn">⚙ デバッグ</button>
-  </div>
-
-  <div id="debug-panel">
-    <div id="debug"></div>
-    <div id="decode-log"></div>
-    <div id="threshold-row">
-      <label>threshold: <span id="threshold-val">-90 dB</span></label>
-      <input id="threshold" type="range" min="-110" max="-50" step="1" value="-90">
+    <div id="toolbar">
+      <button class="tool-btn" id="fullscreen-btn">⛶ フルスクリーン</button>
+      <button class="tool-btn" id="debug-btn">⚙ デバッグ</button>
     </div>
-  </div>
+
+    <div id="debug-panel">
+      <div id="debug"></div>
+      <div id="decode-log"></div>
+      <div id="threshold-row">
+        <label>threshold: <span id="threshold-val">-90 dB</span></label>
+        <input id="threshold" type="range" min="-110" max="-50" step="1" value="-90">
+      </div>
+    </div>
+  </main>
 
   <script src="./app.js"></script>
-  <script>
-    document.getElementById('start-btn').addEventListener('click', startEmulator);
-  </script>
 </body>
 </html>

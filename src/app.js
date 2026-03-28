@@ -448,3 +448,5 @@ async function startEmulator() {
 
   animFrameId = requestAnimationFrame(decode);
 }
+
+document.getElementById('start-btn').addEventListener('click', startEmulator);
